@@ -1,0 +1,16 @@
+{
+  "name": "WAF-Demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "@popperjs/core": "^2.11.0",
+    "bootstrap": "^5.1.3"
+  },
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "prebuild": "npx rimraf build",
+    "build": "parcel build --public-url ./ ./index.html --experimental-scope-hoisting --out-dir build"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.12"
+  }
+}

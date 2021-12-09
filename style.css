@@ -1,0 +1,10 @@
+button {
+    margin: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 25px;
+    right: 25px;
+}
