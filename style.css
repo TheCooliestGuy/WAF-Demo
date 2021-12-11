@@ -5,6 +5,26 @@ button {
 footer {
     position: fixed;
     bottom: 0;
-    left: 25px;
-    right: 25px;
+    left: 275px;
+    right: 275px;
 }
+
+.form-switch.form-switch-lg .form-check-input {
+    height: 2rem;
+    width: calc(3rem + 0.75rem);
+    border-radius: 4rem;
+}
+
+.log {
+    background-color: black;
+    border: 2px solid darkgray;
+    height: 150px;
+    width: 300px;
+    overflow-y: scroll;
+    scrollbar-base-color: white;
+}
+
+.col-2 {
+    margin-top: 12px;
+}
+
