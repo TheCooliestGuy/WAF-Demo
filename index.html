@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-2">
             <div class = "button-panel">
-            <button type="button" class = "btn btn-outline-danger"> Script 1 </button> <br>
+            <button onclick="document.getElementById('log_text').innerHTML= '>Test'" type="button" class = "btn btn-outline-danger" > Script 1 </button> <br>
             <button type="button" class = "btn btn-outline-danger"> Script 2 </button> <br>
             <button type="button" class = "btn btn-outline-danger"> Script 3 </button> <br>
         </div>
@@ -36,12 +36,7 @@
         <div class="col">
             Log of User's actions
             <div class = log>
-                <p style= "color: green"> Test </p>
-                <p style= "color: green"> Test </p>
-                <p style= "color: green"> Test </p>
-                <p style= "color: green"> Test </p>
-                <p style= "color: green"> Test </p>
-                <p style= "color: green"> Test </p>
+                <p id=log_text style= "color: green">  </p>
 
             </div>
         </div>
