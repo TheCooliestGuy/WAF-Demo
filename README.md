@@ -1,7 +1,7 @@
 # WAF-Demo
 
 
-##Author
+## Author
 Mason LaValley
 
 ## Installation
