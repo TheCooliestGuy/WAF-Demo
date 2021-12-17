@@ -44,14 +44,14 @@
         <div class="col-2">
             <div class = "button-panel">
             <button id = "Attack1" type="button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button> <br>
-            <button type="button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
-            <button type="button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
+            <button id = "Attack2" type="button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
+            <button id = "Attack3" type="button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
         </div>
         </div>
         <div class="col-3">
-            Log of User's actions
+            Log of Malicious User's actions
             <div class = log>
-                <ul class = log id = "log_text" style="color: green">
+                <ul class = log id = "User_log_text" style="color: green">
 
                 </ul>
             </div>
@@ -59,7 +59,7 @@
         <div class="col">
             Log of WAF Actions
             <div class = log>
-                <ul class = log id = "log_text" style="color: green">
+                <ul class = log id = "WAF_log_text" style="color: green">
 
                 </ul>
             </div>
@@ -67,19 +67,32 @@
     </div>
     <script>
         document.getElementById("Attack1").addEventListener("click", printAttack1);
+        document.getElementById("Attack1").addEventListener("click", printWAF1);
 
         function printAttack1() {
-            let langs = ['Hacking into Mainframe','HTML','CSS'];
+            let actions = ['', 'Wait for victim to click link','Embed malicious request into hyperlink','Forge malicious request'];
 
-            let nodes = langs.map(lang => {
+            let nodes = actions.map(action => {
                 let li = document.createElement('li');
-                li.textContent = lang;
+                li.textContent = action;
                 return li;
             });
 
-            //let text = document.createTextNode(">Test");
-            // tag.appendChild(text);
-            let log = document.getElementById('log_text');
+            let log = document.getElementById('User_log_text');
+            log.append(...nodes);
+
+        }
+
+        function printWAF1() {
+            let actions = ['', 'Present CAPTCHAs that alert unwary users','Track possible exploit attempts','Filter requests to sensitive pages'];
+
+            let nodes = actions.map(action => {
+                let li = document.createElement('li');
+                li.textContent = action;
+                return li;
+            });
+
+            let log = document.getElementById('WAF_log_text');
             log.append(...nodes);
         }
     </script>
