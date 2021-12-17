@@ -16,20 +16,25 @@
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <span class="fs-4 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Web Application Firewall Demonstration</span>
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/WAF-Demo/index.html" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/WAF-Demo/pages/features.html" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="/WAF-Demo/pages/about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/pages/features.html" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="/pages/about.html" class="nav-link">About</a></li>
         </ul>
     </header>
 </div>
 <!-- empty container to push the main row down -->
-<div class="container" style="margin-bottom: 150px">
+<div class="container">
     <div class="row">
         <div class="col-2">
         </div>
-        <div class="col-3">
-        </div>
         <div class="col">
+            <div class = "btn-group">
+                <button id = "Attack1" type = "button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button> <br>
+                <button id = "Attack2" type = "button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
+                <button id = "Attack3" type = "button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
+            </div>
+        </div>
+        <div class="col-3">
         </div>
     </div>
 </div>
@@ -37,11 +42,7 @@
 <div class="container">
     <div class="row">
         <div class="col-2">
-            <div class = "button-panel">
-            <button id = "Attack1" type = "button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button> <br>
-            <button id = "Attack2" type = "button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
-            <button id = "Attack3" type = "button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
-        </div>
+
         </div>
         <div class="col-3">
             Log of Malicious User's actions
