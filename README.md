@@ -24,6 +24,5 @@ This will host the server on **localhost:8080** by default
 Read the http-server documentation at the link below, to learn more about changing the server port:
 
 https://www.npmjs.com/package/http-server
-## Alternate Method to View
-https://thecooliestguy.github.io/WAF-Demo/index.html
+
 
