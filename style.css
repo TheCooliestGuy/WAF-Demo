@@ -23,7 +23,7 @@ footer {
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .col-2 {
@@ -41,4 +41,10 @@ ul.log li::before {
 
 ul.log.li {
     color: green;
+}
+
+.feature {
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
 }

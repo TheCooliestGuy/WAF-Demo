@@ -4,14 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script type = "module" src="index.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href = "style.css">
     <title>Web Application Firewall Demonstration</title>
 </head>
 <body>
-
+<!-- Container for the header -->
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <span class="fs-4 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Web Application Firewall Demonstration</span>
@@ -22,37 +22,31 @@
         </ul>
     </header>
 </div>
-
+<!-- empty container to push the main row down -->
 <div class="container" style="margin-bottom: 150px">
-
     <div class="row">
         <div class="col-2">
-
         </div>
         <div class="col-3">
-
         </div>
         <div class="col">
-
         </div>
     </div>
-
 </div>
+<!-- Main row. Contains the buttons as well as the logs that are printed into -->
 <div class="container">
-
     <div class="row">
         <div class="col-2">
             <div class = "button-panel">
-            <button id = "Attack1" type="button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button> <br>
-            <button id = "Attack2" type="button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
-            <button id = "Attack3" type="button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
+            <button id = "Attack1" type = "button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button> <br>
+            <button id = "Attack2" type = "button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
+            <button id = "Attack3" type = "button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
         </div>
         </div>
         <div class="col-3">
             Log of Malicious User's actions
             <div class = log>
-                <ul class = log id = "User_log_text" style="color: green">
-
+                <ul class = log id = "User_log_text" style = "color: green">
                 </ul>
             </div>
         </div>
@@ -60,45 +54,13 @@
             Log of WAF Actions
             <div class = log>
                 <ul class = log id = "WAF_log_text" style="color: green">
-
                 </ul>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById("Attack1").addEventListener("click", printAttack1);
-        document.getElementById("Attack1").addEventListener("click", printWAF1);
-
-        function printAttack1() {
-            let actions = ['End', 'Wait for victim to click link','Embed malicious request into hyperlink','Forge malicious request'];
-
-            let nodes = actions.map(action => {
-                let li = document.createElement('li');
-                li.textContent = action;
-                return li;
-            });
-
-            let log = document.getElementById('User_log_text');
-            log.append(...nodes);
-
-        }
-
-        function printWAF1() {
-            let actions = ['End', 'Present CAPTCHAs that alert unwary users','Track possible exploit attempts','Filter requests to sensitive pages'];
-
-            let nodes = actions.map(action => {
-                let li = document.createElement('li');
-                li.textContent = action;
-                return li;
-            });
-
-            let log = document.getElementById('WAF_log_text');
-            log.append(...nodes);
-        }
-    </script>
-    <script src="index.js"></script>
 </div>
 
+<!-- Footer container -->
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -106,7 +68,6 @@
             </a>
             <span class="text-muted">Created by Mason LaValley</span>
         </div>
-
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3"><a  href="https://www.linkedin.com/in/mason-lavalley-0632b8209/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>

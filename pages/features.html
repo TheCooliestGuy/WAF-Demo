@@ -4,14 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href = "/style.css">
     <title>Web Application Firewall Demonstration</title>
 </head>
 <body>
-<script src="./index.js"></script>
+<!-- Container for the header -->
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <span class="fs-4 d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Web Application Firewall Demonstration</span>
@@ -22,37 +21,63 @@
         </ul>
     </header>
 </div>
-
+<!-- empty container to push the main row down -->
+<div class="container" style="margin-bottom: 150px">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <h1 style = text-align:center;> Features </h1>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<!-- empty container to push the main row down -->
 <div class="container">
     <div class="row">
         <div class="col">
         </div>
         <div class="col-11">
-            <h1 style = text-align:center; >Hi! Welcome to my Web-App!</h1>
         </div>
         <div class="col">
         </div>
     </div>
 </div>
+<!-- Main container row. Holds that divs that contain the feature and the explanation of the feature -->
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src = "/WAF-Demo/images/LinkedIn.jpg" class = "img-fluid" alt="Picture of Me">
+            <div class = "feature">
+                <button type="button" class = "btn btn-outline-danger" > Cross-Site Request Forgery </button>
+                <p> This button executes the script that simulates a Cross-Site Request Forgery attack. The button will print
+                    to both the Malicious User's log, as well as a simulation of what the Web Application Firewall does in response.</p>
+            </div>
+            <div class = "feature">
+                <button type="button" class = "btn btn-outline-danger"> Cross-Site Scripting </button> <br>
+                <p> This button does the same as the Cross-Site Request Forgery button, except it simulates a Cross-Site Scripting attack. </p>
+            </div>
+            <div class = "feature">
+                <button type="button" class = "btn btn-outline-danger"> SQL Injection </button> <br>
+                <p> Same as the other two buttons except with an SQL Injection attack! </p>
+            </div>
         </div>
-        <div class="col-7">
-            <p> I am a graduating Computer Science and Engineering student from The Ohio State University, and I created
-                this Web-App to demonstrate both what a WAF (Web Application Firewall) is, as well as how it works and
-                protects your Web-App.</p>
-            <p> I have a passion for Cyber-Security, and as such know that my field only becomes more important by the day. In order to do my part,
-                I wanted to make something that could help educate others about how they can stay secure. This Web-App is
-                designed to help Web Developers understand the threats their applications face, and how they can protect themselves.</p>
-            <p> Hopefully I am able to help you learn something!</p>
+        <div class="col">
+            <div class = "feature">
+                <div class = log style="margin-right: 13%; margin-left: 13%; margin-top: 2px;">
+                    <ul class = log style="color: green; text-align: left;">
+                        <li> Hello </li>
+                    </ul>
+                </div>
+                <p> This is a log of the actions taken by both the malicious user, as well as the Web Application Firewall.
+                The log gets written into by each of the buttons upon pressing them.</p>
+            </div>
         </div>
         <div class="col">
         </div>
     </div>
 </div>
-
+<!-- Footer container -->
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
