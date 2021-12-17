@@ -2,6 +2,7 @@
 
 ##Author
 Mason LaValley
+
 ## Installation
 Intended for use on Mozilla Firefox.
 
