@@ -70,7 +70,7 @@
         document.getElementById("Attack1").addEventListener("click", printWAF1);
 
         function printAttack1() {
-            let actions = ['', 'Wait for victim to click link','Embed malicious request into hyperlink','Forge malicious request'];
+            let actions = ['End', 'Wait for victim to click link','Embed malicious request into hyperlink','Forge malicious request'];
 
             let nodes = actions.map(action => {
                 let li = document.createElement('li');
@@ -84,7 +84,7 @@
         }
 
         function printWAF1() {
-            let actions = ['', 'Present CAPTCHAs that alert unwary users','Track possible exploit attempts','Filter requests to sensitive pages'];
+            let actions = ['End', 'Present CAPTCHAs that alert unwary users','Track possible exploit attempts','Filter requests to sensitive pages'];
 
             let nodes = actions.map(action => {
                 let li = document.createElement('li');
